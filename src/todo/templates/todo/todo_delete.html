@@ -3,11 +3,11 @@
 {% block content %}
 <form action="" method="POST">
     {% csrf_token %}
-    <p>Are you sure to delete {{ todo }} ?</p>
+    <p>Are you sure to delete '{{ todo }}' ?</p>
     <input type="submit" value="Delete">
-    <a href="{% url 'todo-list'%}">
-        <button>Cancel</button>
-    </a>
 </form>
+<a href="{% url 'todo-list'%}">
+    <button>Cancel</button>
+</a>
 
 {% endblock content %}
