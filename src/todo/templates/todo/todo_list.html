@@ -5,7 +5,11 @@
     <h2>ToDo List</h2>
     <ul>
         {% for item in todos %}
+        {% if item.completed %}
+        <li><del>{{ item }}</del></li>
+        {% else %}
         <li>{{ item }}</li>
+        {% endif %}
         {% endfor %}
     </ul>
 </div>
